@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <title>Afficheur de nom</title>
+</head>
+<body>
+ 
+<!-- Formulaire pour afficher le nom -->
+ <form>
+   <h1>FORMULAIRE AFFICHEUR DE NOM</h1>
+ 
+   <!-- textbox pour le nom de l'élève -->
+   <label for="txtPrenom">Prénom:</label>
+   <input type="text" id="txtPrenom">
+   <br><br>
+ 
+<label for="txtNomMilieu">Nom du milieu:</label>
+<input type="text" id="txtNomMilieu">
+<br><br>
+<label for="txtDNom">Dernier nom:</label>
+<input type="text" id="txtDNom">
+<br><br>
+ 
+<!-- bouton pour soumettre le formulaire -->
+<input type="button" id="btnInitiales" onclick="afficheInitiales()" value="Affiche tes initiales">
+<input type="button" id="btnNom" onclick="afficheNom()" value="Affiche ton Nom au complet">
+<input type="button" id="btnUtilisateur" onclick="afficheUtilisateur()" value="Affiche ton nom d'utilisateur">
+ 
+<!-- Création d'une section pour l'affichage des résultats -->
+<div id="divAffiche">
+ 
+</div>
+ 
+<script>
+   function afficheInitiales() {
+       //Chercher les données dans le formulaire
+       var nom = document.getElementById("txtPrenom").value;
+       var nomMilieu = document.getElementById("txtNomMilieu").value;
+       var dernierNom = document.getElementById("txtDNom").value;
+       var affiche = document.getElementById("divAffiche");
+       var message = (nom[0].toUpperCase() + "." + nomMilieu[0].toUpperCase() + "." + dernierNom[0].toUpperCase())
+ 
+       divAffiche = message
+  
+      //Afficher le message sur la page web
+       affiche.innerHTML = message;
+       }
+ 
+   function afficheNom() {
+       //Chercher les données dans le formulaire
+       var nom = document.getElementById("txtPrenom").value;
+       var nomMilieu = document.getElementById("txtNomMilieu").value;
+       var dernierNom = document.getElementById("txtDNom").value;
+       var affiche = document.getElementById("divAffiche");
+       var message = (nom + " " + nomMilieu + " " + dernierNom)
+ 
+       divAffiche = message
+ 
+       //Afficher le message sur la page web
+       affiche.innerHTML = message;
+       }
+ 
+   function afficheUtilisateur() {
+       //Chercher les données dans le formulaire
+       var nom = document.getElementById("txtPrenom").value;
+       var nomMilieu = document.getElementById("txtNomMilieu").value;
+       var dernierNom = document.getElementById("txtDNom").value;
+       var affiche = document.getElementById("divAffiche");
+       var message = (nom[0].toLowerCase() + nomMilieu[0].toLowerCase() + dernierNom.toLowerCase())
+ 
+       divAffiche = message
+ 
+       //Afficher le message sur la page web
+       affiche.innerHTML = message;
+       }
+     </script>
+ 
+   </form>
+  
+ </body>
+</html>
