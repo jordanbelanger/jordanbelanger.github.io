@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <title>Afficheur de nom</title>
+</head>
+<body>
+ 
+ <form>
+   <h1>Programme Astérisques</h1>
+ 
+   <label for="txtAsterisque"># d'Astérisques:</label>
+   <input type="text" id="txtAsterisque">
+   <br><br>
+
+<input type="button" id="btnAsterisques" onclick="afficheAsterisques()" value="Affiche tes astérisques">
+
+<div id="divAffiche">
+ 
+</div>
+ 
+<script>
+   function afficheAsterisques() {
+       //Chercher les données dans le formulaire
+       var nombre = document.getElementById("txtAsterisque").value;
+       var asterisques = "";
+       for (let i=1; i<=nombre; i++) {
+         asterisques = asterisques + "*";
+}
+       var affiche = document.getElementById("divAffiche");
+       var message = (asterisques)
+ 
+       divAffiche = message
+ 
+       //Afficher le message sur la page web
+       affiche.innerHTML = message;
+       }
+     </script>
+ 
+   </form>
+  
+ </body>
+</html>
